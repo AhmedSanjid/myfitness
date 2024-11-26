@@ -12,11 +12,11 @@
                     <div class="col-lg-7 px-5 text-start">
                         <div class="h-100 d-inline-flex align-items-center py-2 me-4">
                             <i class="fa fa-envelope text-primary me-2"></i>
-                            <h6 class="mb-0">isdb@yahoo.com</h6>
+                            <h6 class="mb-0">idbb@isdb-bisew.org</h6>
                         </div>
                         <div class="h-100 d-inline-flex align-items-center py-2">
                             <i class="fa fa-phone-alt text-primary me-2"></i>
-                            <h6 class="mb-0">+0124456893</h6>
+                            <h6 class="mb-0">: +88 09638 917 000</h6>
                         </div>
                     </div>
                     <div class="col-lg-5 px-5 text-end">
@@ -49,12 +49,12 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="class.html" class="nav-item nav-link">Classes</a>
+                            <a href="/About" class="nav-item nav-link">About</a>
+                            <a href="/Class" class="nav-item nav-link">Classes</a>
                             <a href="team.html" class="nav-item nav-link">Trainers</a>
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
-                        <a href="" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block">Join Us</a>
+                        <a href="/Login" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block">Join Us</a>
                     </div>
                 </nav>
             </div>
