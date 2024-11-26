@@ -54,7 +54,7 @@
                 <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-5">
                     <h4 class="text-uppercase text-white mb-4">Newsletter</h4>
                     <h6 class="text-uppercase text-white">Subscribe Our Newsletter</h6>
-                    <p class="text-light">Amet justo diam dolor rebum lorem sit stet sea justo kasd</p>
+                    <p class="text-light">As you embark on your fitness journey, remember that every step, no matter how small, brings you closer to your goals.</p>
                     <form action="">
                         <div class="input-group">
                             <input type="text" class="form-control border-white p-3" placeholder="Your Email">
