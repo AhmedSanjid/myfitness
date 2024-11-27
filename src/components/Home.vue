@@ -4,7 +4,7 @@
         <div class="row gx-5">
             <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
                 <div class="position-relative h-100">
-                    <img class="position-absolute w-80 h-80 rounded" src="/assets/img/about.jpg" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100 rounded" src="/assets/img/about.jpg" style="object-fit: cover;">
                 </div>
             </div>
             <div class="col-lg-7">
@@ -39,31 +39,46 @@
 
     <!-- Programe Start -->
     <div class="container-fluid programe position-relative px-5 mt-5" style="margin-bottom: 135px;">
-        <div class="row g-5 gb-5">
+        <div class="row g-5 gb-5" style="cursor:pointer" > 
             <div class="col-lg-4 col-md-6">
-                <div class="bg-light rounded text-center p-5">
-                    <i class="flaticon-six-pack display-1 text-primary"></i>
-                    <h3 class="text-uppercase my-4">Body Building</h3>
-                    <p>Proper nutrition is essential for maximizing muscle growth and recovery. To build muscle effectively.</p>
-                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
+    <a href="/Booking" class="text-decoration-none">
+        <div class="bg-light rounded text-center p-5">
+            <i class="flaticon-six-pack display-1 text-primary"></i>
+            <h3 class="text-uppercase my-4 text-dark">Booking Schedule</h3>
+            <p class="text-dark">
+                Proper nutrition is essential for maximizing muscle growth and recovery. To build muscle effectively.
+            </p>
+            <span class="text-uppercase text-primary">Read More <i class="bi bi-arrow-right"></i></span>
+        </div>
+    </a>
+</div>
+
             <div class="col-lg-4 col-md-6">
-                <div class="bg-light rounded text-center p-5">
-                    <i class="flaticon-barbell display-1 text-primary"></i>
-                    <h3 class="text-uppercase my-4">Weight Lefting</h3>
-                    <p>Weightlifting is a powerful form of strength training that involves lifting heavy weights to build muscle mass, improve strength, and enhance overall fitness</p>
-                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="bg-light rounded text-center p-5">
-                    <i class="flaticon-bodybuilding display-1 text-primary"></i>
-                    <h3 class="text-uppercase my-4">Muscle Building</h3>
-                    <p>Muscle building involves engaging in strength training exercises that stimulate muscle growth through resistance and progressive overload.</p>
-                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
+                <a href="/Progress" class="text-decoration-none">
+                    <div class="bg-light rounded text-center p-5">
+                        <i class="flaticon-barbell display-1 text-primary"></i>
+                        <h3 class="text-uppercase my-4 text-dark">Progress Tracker</h3>
+                        <p class="text-dark">
+                            Weightlifting is a powerful form of strength training that involves lifting heavy weights to build muscle mass, improve strength, and enhance overall fitness.
+                        </p>
+            <span class="text-uppercase text-primary">Read More <i class="bi bi-arrow-right"></i></span>
+        </div>
+    </a>
+</div>
+
+<div class="col-lg-4 col-md-6">
+    <a href="/Diet" class="text-decoration-none">
+        <div class="bg-light rounded text-center p-5">
+            <i class="flaticon-bodybuilding display-1 text-primary"></i>
+            <h3 class="text-uppercase my-4 text-dark">Nutretion & Diet Guidance</h3>
+            <p class="text-dark">
+                Muscle building involves engaging in strength training exercises that stimulate muscle growth through resistance and progressive overload.
+            </p>
+            <span class="text-uppercase text-primary">Read More <i class="bi bi-arrow-right"></i></span>
+        </div>
+    </a>
+</div>
+
             <div class="col-lg-12 col-md-6 text-center">
                 <h1 class="text-uppercase text-light mb-4">30% Discount For This Summer</h1>
                 <a href="/Member" class="btn btn-primary py-3 px-5">Become A Member</a>

@@ -30,6 +30,24 @@ const routes =  [
     alias: "/Class",
     name: "Class",
     component: () => import("./components/Class")
+  },
+  {
+    path: "/Booking",
+    alias: "/Booking",
+    name: "Booking",
+    component: () => import("./components/Booking")
+  },
+  {
+    path: "/Progress",
+    alias: "/Progress",
+    name: "Progress",
+    component: () => import("./components/Progress")
+  },
+  {
+    path: "/Diet",
+    alias: "/Diet",
+    name: "Diet",
+    component: () => import("./components/Diet")
   }
 ];
 
