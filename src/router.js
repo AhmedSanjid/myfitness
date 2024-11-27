@@ -48,6 +48,18 @@ const routes =  [
     alias: "/Diet",
     name: "Diet",
     component: () => import("./components/Diet")
+  },
+  {
+    path: "/Sell",
+    alias: "/Sell",
+    name: "Sell",
+    component: () => import("./components/Sell")
+  },
+  {
+    path: "/Bmi",
+    alias: "/Bmi",
+    name: "Bmi",
+    component: () => import("./components/Bmi")
   }
 ];
 

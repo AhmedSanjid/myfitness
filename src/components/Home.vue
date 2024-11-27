@@ -70,7 +70,7 @@
     <a href="/Diet" class="text-decoration-none">
         <div class="bg-light rounded text-center p-5">
             <i class="flaticon-bodybuilding display-1 text-primary"></i>
-            <h3 class="text-uppercase my-4 text-dark">Nutretion & Diet Guidance</h3>
+            <h3 class="text-uppercase my-4 text-dark">Nutrition & Diet Guidance</h3>
             <p class="text-dark">
                 Muscle building involves engaging in strength training exercises that stimulate muscle growth through resistance and progressive overload.
             </p>
@@ -80,7 +80,7 @@
 </div>
 
             <div class="col-lg-12 col-md-6 text-center">
-                <h1 class="text-uppercase text-light mb-4">30% Discount For This Summer</h1>
+                <h1 class="text-uppercase text-light mb-4">30% Discount For This Winter</h1>
                 <a href="/Member" class="btn btn-primary py-3 px-5">Become A Member</a>
             </div>
         </div>
@@ -284,44 +284,38 @@
             <div class="col-lg-4">
                 <div class="blog-item">
                     <div class="position-relative overflow-hidden rounded-top">
-                        <img class="img-fluid" src="/assets/img/blog-1.jpg" alt="">
+                            <a href="/Sell">
+                                <img class="img-fluid" src="https://img.freepik.com/free-vector/gradient-instagram-shop-logo-design_23-2149718661.jpg" alt="">
+                            </a>
                     </div>
+
                     <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
-                        <div class="flex-shrink-0 text-center text-secondary border-end border-secondary pe-3 me-3">
-                            <span>01</span>
-                            <h6 class="text-light text-uppercase mb-0">January</h6>
-                            <span>2025</span>
-                        </div>
-                        <a class="h5 text-uppercase text-light" href="">Discover expert tips and strategies to achieve your fitness goals and unlock your full potential!</a>
+                      
+                        <a class="h5 text-uppercase text-light" href="">"Fuel Your Workout, Fuel Your Life."</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="blog-item">
                     <div class="position-relative overflow-hidden rounded-top">
-                        <img class="img-fluid" src="/assets/img/blog-2.jpg" alt="">
+                            <a href="/Bmi">
+                                <img class="img-fluid" src="https://m.media-amazon.com/images/I/614yLR9F8FL.png" alt="" height="200px">
+                            </a>
                     </div>
                     <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
-                        <div class="flex-shrink-0 text-center text-secondary border-end border-secondary pe-3 me-3">
-                            <span>01</span>
-                            <h6 class="text-light text-uppercase mb-0">July</h6>
-                            <span>2025</span>
-                        </div>
-                        <a class="h5 text-uppercase text-light" href="">Learn the best workout techniques and nutrition tips to elevate your fitness journey and see real results!</a>
+                                <a class="h5 text-uppercase text-light" href="">"Precision in Every Measurement for Your Best Self."</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="blog-item">
                     <div class="position-relative overflow-hidden rounded-top">
-                        <img class="img-fluid" src="/assets/img/blog-3.jpg" alt="">
+                            <a href="/Sell">
+                                <img class="img-fluid" src="https://img.freepik.com/free-vector/gradient-instagram-shop-logo-design_23-2149718661.jpg" alt="">
+                            </a>
                     </div>
+
                     <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
-                        <div class="flex-shrink-0 text-center text-secondary border-end border-secondary pe-3 me-3">
-                            <span>01</span>
-                            <h6 class="text-light text-uppercase mb-0">Decmber</h6>
-                            <span>2025</span>
-                        </div>
                         <a class="h5 text-uppercase text-light" href="">Get inspired with expert advice and actionable tips to push your limits and achieve lasting results!</a>
                     </div>
                 </div>
