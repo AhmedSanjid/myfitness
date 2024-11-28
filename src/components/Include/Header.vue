@@ -4,7 +4,7 @@
         <div class="row gx-0">
             <div class="col-lg-3 bg-dark d-none d-lg-block">
                 <a href="http://127.0.0.1:8081" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                    <h1 class="m-0 display-4 text-primary text-uppercase">GymNest</h1>
+                    <h1 class="m-0 display-4 text-uppercase nav-item nav-link" id="gym">GymNest</h1>
                 </a>
             </div>
             <div class="col-lg-9">
@@ -21,19 +21,19 @@
                     </div>
                     <div class="col-lg-5 px-5 text-end">
                         <div class="d-inline-flex align-items-center py-2">
-                            <a class="btn btn-light btn-square rounded-circle me-2" href="">
+                            <a class="btn btn-light btn-square rounded-circle me-2 text-primary " href="">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a class="btn btn-light btn-square rounded-circle me-2" href="">
+                            <a class="btn btn-light btn-square rounded-circle me-2 text-primary" href="">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a class="btn btn-light btn-square rounded-circle me-2" href="">
+                            <a class="btn btn-light btn-square rounded-circle me-2 text-primary" href="">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a class="btn btn-light btn-square rounded-circle me-2" href="">
+                            <a class="btn btn-light btn-square rounded-circle me-2 text-primary" href="">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a class="btn btn-light btn-square rounded-circle" href="">
+                            <a class="btn btn-light btn-square rounded-circle text-primary" href="">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </div>
@@ -48,21 +48,22 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="http://127.0.0.1:8081/" class="nav-item nav-link active">Home</a>
                             <a href="/About" class="nav-item nav-link">About</a>
                             <a href="/Class" class="nav-item nav-link">Classes</a>
                             <a href="team.html" class="nav-item nav-link">Trainers</a>
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
-                        <a href="/Login" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block">Join Us</a>
+                        <a href="/Login" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block">
+                            <i class="bi bi-lungs-fill"></i>
+                        </a>
+
                     </div>
                 </nav>
             </div>
         </div>
     </div>
     <!-- Header End -->
-
-    
 
 </template>
 
@@ -74,3 +75,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+#gym:hover {
+  color: white;
+}
+</style>

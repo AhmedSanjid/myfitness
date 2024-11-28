@@ -1,5 +1,11 @@
 <!-- src/components/BMICalculator.vue -->
 <template>
+
+                    <div class="pr-md-3 d-none d-md-block">
+                      <h4 class="display-4 text-dark font-weight-bold mb-4">Whate is BMI?</h4>
+                      <p class="m-0 text-dark">BMI (Body Mass Index) is a simple measurement used to assess whether a person has a healthy body weight for a given height. It is calculated by dividing a person's weight in kilograms by the square of their height in meters. The result is categorized into different weight ranges, helping to identify whether a person is underweight, normal weight, overweight, or obese.</p>
+                  </div>
+
     <div class="bmi-calculator">
       <h2>Calculate Your BMI</h2>
       <form @submit.prevent="calculateBMI">
