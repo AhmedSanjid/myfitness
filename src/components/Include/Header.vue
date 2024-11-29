@@ -48,11 +48,11 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="http://127.0.0.1:8081/" class="nav-item nav-link active">Home</a>
+                            <a href="/" class="nav-item nav-link active">Home</a>
                             <a href="/About" class="nav-item nav-link">About</a>
                             <a href="/Class" class="nav-item nav-link">Classes</a>
-                            <a href="team.html" class="nav-item nav-link">Trainers</a>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="/Video" class="nav-item nav-link">Videos</a>
+                            <a href="/Notice" class="nav-item nav-link">Notices</a>
                         </div>
                         <a href="/Login" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block">
                             <i class="bi bi-lungs-fill"></i>

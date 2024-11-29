@@ -10,7 +10,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Protein Powders</h5>
                         <p class="card-text">Price: $30</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>
@@ -23,7 +23,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Pre-workout Supplements</h5>
                         <p class="card-text">Price: $25</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>
@@ -36,7 +36,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Post-workout Recovery Shakes</h5>
                         <p class="card-text">Price: $20</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>
@@ -50,7 +50,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Energy Bars</h5>
                         <p class="card-text">Price: $2</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>
@@ -63,7 +63,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Hydration Bottles and Shakers</h5>
                         <p class="card-text">Price: $15</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>
@@ -76,7 +76,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Multivitamins for Athletes</h5>
                         <p class="card-text">Price: $10</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>
@@ -89,7 +89,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Resistance Bands</h5>
                         <p class="card-text">Price: $12</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>
@@ -102,7 +102,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Yoga Mats</h5>
                         <p class="card-text">Price: $25</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>
@@ -115,7 +115,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Foam Rollers</h5>
                         <p class="card-text">Price: $18</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>
@@ -128,7 +128,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Athletic Tape</h5>
                         <p class="card-text">Price: $5</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>
@@ -141,7 +141,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Gym Gloves</h5>
                         <p class="card-text">Price: $15</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>
@@ -154,7 +154,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Weightlifting Belts</h5>
                         <p class="card-text">Price: $20</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>
@@ -167,7 +167,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Knee Sleeves</h5>
                         <p class="card-text">Price: $18</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>
@@ -180,7 +180,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Wrist Wraps</h5>
                         <p class="card-text">Price: $10</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>
@@ -193,7 +193,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Ankle Weights</h5>
                         <p class="card-text">Price: $12</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>
@@ -206,7 +206,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Jump Ropes</h5>
                         <p class="card-text">Price: $8</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>
@@ -219,7 +219,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Natural Energy Boosters (like Matcha packets)</h5>
                         <p class="card-text">Price: $5</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>
@@ -232,7 +232,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Essential Oils for Relaxation and Focus</h5>
                         <p class="card-text">Price: $15</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>
@@ -245,7 +245,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Reusable Ice Packs for Recovery</h5>
                         <p class="card-text">Price: $10</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>
@@ -258,7 +258,7 @@
                     <div class="card-body">
                         <h5 class="card-title">UV Protection Sports Sunglasses</h5>
                         <p class="card-text">Price: $25</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>
@@ -271,7 +271,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Eco-friendly Laundry Detergent for Workout Clothes</h5>
                         <p class="card-text">Price: $12</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        
                         <a href="#" class="btn btn-success">Add to Cart</a>
                         <a href="#" class="btn btn-danger">Buy Now</a>
                     </div>

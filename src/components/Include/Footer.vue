@@ -29,23 +29,23 @@
                     <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
                         <h4 class="text-uppercase text-light mb-4">Quick Links</h4>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Class Schedule</a>
-                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Trainers</a>
-                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                            <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                            <a class="text-secondary mb-2" href="/"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                            <a class="text-secondary mb-2" href="/About"><i class="bi bi-arrow-right text-primary me-2"></i>About</a>
+                            <a class="text-secondary mb-2" href="/Class"><i class="bi bi-arrow-right text-primary me-2"></i>Classes</a>
+                            <a class="text-secondary mb-2" href="/Video"><i class="bi bi-arrow-right text-primary me-2"></i>Videos</a>
+                            <a class="text-secondary mb-2" href="/Notice"><i class="bi bi-arrow-right text-primary me-2"></i>Notices</a>
+                            <a class="text-secondary" href="/Member"><i class="bi bi-arrow-right text-primary me-2"></i>Become a Member</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
                         <h4 class="text-uppercase text-light mb-4">Popular Links</h4>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Class Schedule</a>
-                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Trainers</a>
-                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                            <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                            <a class="text-secondary mb-2" href="/Login"><i class="bi bi-arrow-right text-primary me-2"></i>Join</a>
+                            <a class="text-secondary mb-2" href="/Booking"><i class="bi bi-arrow-right text-primary me-2"></i>Booking</a>
+                            <a class="text-secondary mb-2" href="/Progress"><i class="bi bi-arrow-right text-primary me-2"></i>Progress Tracker</a>
+                            <a class="text-secondary mb-2" href="/Diet"><i class="bi bi-arrow-right text-primary me-2"></i>Diet Guidanee</a>
+                            <a class="text-secondary mb-2" href="/Sell"><i class="bi bi-arrow-right text-primary me-2"></i>Online Store</a>
+                            <a class="text-secondary" href="/Bmi"><i class="bi bi-arrow-right text-primary me-2"></i>BMI Checker</a>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
         <div class="row gx-5">
             <div class="col-lg-8">
                 <div class="py-lg-4 text-center">
-                    <p class="text-secondary mb-0">&copy; <a class="text-light fw-bold" href="#">Your Site Name</a>. All Rights Reserved.</p>
+                    <p class="text-secondary mb-0">&copy; <a class="text-light fw-bold" href="#">Crown</a>. All Rights Reserved.</p>
                 </div>
             </div>
             <div class="col-lg-4">

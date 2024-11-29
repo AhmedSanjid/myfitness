@@ -71,7 +71,6 @@
         </div>
     </a>
 </div>
-
             <div class="col-lg-12 col-md-6 text-center">
                 <h1 class="text-uppercase text-light mb-4">30% Discount For This Winter</h1>
                 <a href="/Member" class="btn btn-primary py-3 px-5">Become A Member</a>
@@ -283,6 +282,7 @@
             <h5 class="text-primary text-uppercase">Services</h5>
             <h1 class="display-3 text-uppercase mb-0">"Elevate Your Strength, Endurance, and Wellness with GymNest!"</h1>
         </div>
+
         <div class="row g-5">
             <div class="col-lg-4">
                 <div class="blog-item">
@@ -293,7 +293,6 @@
                     </div>
 
                     <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
-                      
                         <a class="h5 text-uppercase text-light" href="">"Fuel Your Workout, Fuel Your Life."</a>
                     </div>
                 </div>
