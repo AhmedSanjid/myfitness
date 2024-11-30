@@ -41,7 +41,7 @@
                 </div>
                 <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0 px-lg-5">
                     <a href="index.html" class="navbar-brand d-block d-lg-none">
-                        <h1 class="m-0 display-4 text-primary text-uppercase">Gymster</h1>
+                        <h1 class="m-0 display-4 text-primary text-uppercase">GymNest</h1>
                     </a>
                     <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
@@ -55,7 +55,7 @@
                             <a href="/Notice" class="nav-item nav-link">Notices</a>
                         </div>
                         <a href="/Login" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block">
-                            <i class="bi bi-lungs-fill"></i>
+                            Log in
                         </a>
 
                     </div>

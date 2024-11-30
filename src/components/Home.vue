@@ -32,51 +32,56 @@
 
     <!-- Programe Start -->
     <div class="container-fluid programe position-relative px-5 mt-5" style="margin-bottom: 135px;">
-        <div class="row g-5 gb-5" style="cursor:pointer" > 
-            <div class="col-lg-4 col-md-6">
-    <a href="/Booking" class="text-decoration-none">
-        <div class="bg-light rounded text-center p-5">
-            <i class="flaticon-six-pack display-1 text-primary"></i>
-            <h3 class="text-uppercase my-4 text-dark">Booking Schedule</h3>
-            <p class="text-dark">
-                Proper nutrition is essential for maximizing muscle growth and recovery. To build muscle effectively.
-            </p>
-            <span class="text-uppercase text-primary">Read More <i class="bi bi-arrow-right"></i></span>
+    <div class="row g-5" style="cursor:pointer">
+        <!-- Booking Schedule Card -->
+        <div class="col-lg-4 col-md-6">
+            <a href="/Booking" class="text-decoration-none">
+                <div class="custom-card">
+                    <i class="flaticon-six-pack display-1 text-primary"></i>
+                    <h3 class="my-4">Booking Schedule</h3>
+                    <p>
+                        Proper nutrition is essential for maximizing muscle growth and recovery. To build muscle effectively.
+                    </p>
+                    <span>Read More <i class="bi bi-arrow-right"></i></span>
+                </div>
+            </a>
         </div>
-    </a>
-</div>
 
-            <div class="col-lg-4 col-md-6">
-                <a href="/Progress" class="text-decoration-none">
-                    <div class="bg-light rounded text-center p-5">
-                        <i class="flaticon-barbell display-1 text-primary"></i>
-                        <h3 class="text-uppercase my-4 text-dark">Progress Tracker</h3>
-                        <p class="text-dark">
-                            Weightlifting is a powerful form of strength training that involves lifting heavy weights to build muscle mass, improve strength, and enhance overall fitness.
-                        </p>
-            <span class="text-uppercase text-primary">Read More <i class="bi bi-arrow-right"></i></span>
+        <!-- Progress Tracker Card -->
+        <div class="col-lg-4 col-md-6">
+            <a href="/Progress" class="text-decoration-none">
+                <div class="custom-card">
+                    <i class="flaticon-barbell display-1 text-primary"></i>
+                    <h3 class="my-4">Progress Tracker</h3>
+                    <p>
+                        Weightlifting is a powerful form of strength training that involves lifting heavy weights to build muscle mass, improve strength, and enhance overall fitness.
+                    </p>
+                    <span>Read More <i class="bi bi-arrow-right"></i></span>
+                </div>
+            </a>
         </div>
-    </a>
-</div>
 
-<div class="col-lg-4 col-md-6">
-    <a href="/Diet" class="text-decoration-none">
-        <div class="bg-light rounded text-center p-5">
-            <i class="flaticon-bodybuilding display-1 text-primary"></i>
-            <h3 class="text-uppercase my-4 text-dark">Nutrition & Diet Guidance</h3>
-            <p class="text-dark">
-                Muscle building involves engaging in strength training exercises that stimulate muscle growth through resistance and progressive overload.
-            </p>
-            <span class="text-uppercase text-primary">Read More <i class="bi bi-arrow-right"></i></span>
+        <!-- Nutrition & Diet Guidance Card -->
+        <div class="col-lg-4 col-md-6">
+            <a href="/Diet" class="text-decoration-none">
+                <div class="custom-card">
+                    <i class="flaticon-bodybuilding display-1 text-primary"></i>
+                    <h3 class="my-4">Nutrition & Diet Guidance</h3>
+                    <p>
+                        Muscle building involves engaging in strength training exercises that stimulate muscle growth through resistance and progressive overload.
+                    </p>
+                    <span>Read More <i class="bi bi-arrow-right"></i></span>
+                </div>
+            </a>
         </div>
-    </a>
-</div>
-            <div class="col-lg-12 col-md-6 text-center">
-                <h1 class="text-uppercase text-light mb-4">30% Discount For This Winter</h1>
-                <a href="/Member" class="btn btn-primary py-3 px-5">Become A Member</a>
-            </div>
+
+        <!-- Discount Banner -->
+        <div class="col-lg-12 col-md-6 text-center">
+            <h1 class="text-uppercase text-light mb-4">30% Discount For This Winter</h1>
+            <a href="/Member" class="btn btn-primary py-3 px-5">Become A Member</a>
         </div>
     </div>
+</div>
     <!-- Programe Start -->
 
 
@@ -280,7 +285,7 @@
     <div class="container-fluid p-5">
         <div class="mb-5 text-center">
             <h5 class="text-primary text-uppercase">Services</h5>
-            <h1 class="display-3 text-uppercase mb-0">"Elevate Your Strength, Endurance, and Wellness with GymNest!"</h1>
+            <h1 class="display-3 text-uppercase mb-0">" Elevate Your Strength, Endurance, and Wellness with GymNest! "</h1>
         </div>
 
         <div class="row g-5">
@@ -293,7 +298,7 @@
                     </div>
 
                     <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
-                        <a class="h5 text-uppercase text-light" href="">"Fuel Your Workout, Fuel Your Life."</a>
+                        <a class="h5 text-uppercase text-light" href="">" Fuel Your Workout, Fuel Your Life "</a>
                     </div>
                 </div>
             </div>
@@ -305,7 +310,7 @@
                             </a>
                     </div>
                     <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
-                                <a class="h5 text-uppercase text-light" href="">"Precision in Every Measurement for Your Best Self."</a>
+                                <a class="h5 text-uppercase text-light" href="">" Precision in Every Measurement for Your Best Self "</a>
                     </div>
                 </div>
             </div>
@@ -318,7 +323,7 @@
                     </div>
 
                     <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
-                        <a class="h5 text-uppercase text-light" href="">"Connecting Minds, Building Communities."</a>
+                        <a class="h5 text-uppercase text-light" href="">" Connecting Minds, Building Communities "</a>
                     </div>
                 </div>
             </div>
@@ -337,3 +342,46 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+/* Base Card Styling */
+.custom-card {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card h3, 
+.custom-card p, 
+.custom-card span {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.custom-card i {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect */
+.custom-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px) scale(1.02);
+    background-color: #080808;
+}
+
+.custom-card:hover h3, 
+.custom-card:hover p, 
+.custom-card:hover span {
+    color: #fff;
+}
+
+.custom-card:hover i {
+    color: #fff;
+    transform: rotate(10deg) scale(1.1);
+}
+</style>
