@@ -11,6 +11,7 @@
     "bootstrap": "^5.3.3",
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
+    "jspdf": "^2.5.2",
     "odometer": "^0.4.8",
     "vue": "^3.2.13",
     "vue-axios": "^3.5.2",

@@ -78,6 +78,12 @@ const routes =  [
     alias: "/Notice",
     name: "Notice",
     component: () => import("./components/Notice")
+  },
+  {
+    path: "/Invoice",
+    alias: "/Invoice",
+    name: "Invocie",
+    component: () => import("./components/Invoice")
   }
 ];
 
