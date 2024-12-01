@@ -1,111 +1,85 @@
 <template>
-   <div class="container my-5">
-  <h1 class="text-center mb-4">Our Trainers</h1>
+  <div class="container my-5">
+    <h1 class="text-center mb-4">Our Trainers</h1>
 
-  <div class="row">
-    <div class="col-md-4 mb-4">
-      <div class="card h-100 text-center">
-        <a href="https://www.youtube.com/watch?v=TEvnRwT0QxE" target=" ">
-          <img src="https://media.istockphoto.com/id/1629139594/photo/young-woman-dribbling-on-court.jpg?s=612x612&w=0&k=20&c=grM1IXjXZokF7yTLKroU_k0bh9C7QXjvwsiAFZTloXA=" class="card-img-top" alt="Trainer 1" height="300px" width="300px">
-        </a>
-          <h3 class="card-title">Mujahidul</h3>
-          <p>Strength & Conditioning Specialists
-- Certified Strength and Conditioning Specialist (CSCS)
-- Powerlifting Coach
-- Bodybuilding Specialist
-- Olympic Weightlifting Coach</p>
-      </div>
-    </div>
-
-    
-    <div class="col-md-4 mb-4">
-      <div class="card h-100 text-center">
-        <a href="https://www.youtube.com/watch?v=t0Q2otsqC4I" target=" ">
-          <img src="https://moewalls.com/wp-content/uploads/2023/04/shadow-moonlight-samurai-thumb-728x410.jpg" class="card-img-top" alt="Trainer 2" height="300px" width="300px">
-        </a>
-        
-          <h3 class="card-title">Hamim</h3>
-      <p>Endurance & Performance Trainers
-- Certified Running Coach
-- Triathlon Coach
-- Endurance Training Specialist
-- High-Intensity Interval Training (HIIT) Specialist</p>
-      </div>
-    </div>
-
-    
-    <div class="col-md-4 mb-4">
-      <div class="card h-100 text-center">
-        <a href="https://www.youtube.com/watch?v=B-KrktB83c8" target=" ">
-          <img src="https://t4.ftcdn.net/jpg/08/98/18/33/360_F_898183342_hCzl0kkrdCebwKsPb4iPXaifYuTYemBq.jpg" class="card-img-top" alt="Trainer 3" height="300px" width="300px">
-        </a>
-        
-          <h3 class="card-title">Minhaz</h3>
-      <p>Weight Loss & Nutrition Experts
-- Certified Weight Management Specialist (CWMS)
-- Precision Nutrition Coach
-- Fitness Nutrition Specialist (FNS)
-- Health and Wellness Coach</p>
-      </div>
-    </div>
-
-    
-    <div class="col-md-4 mb-4">
-      <div class="card h-100 text-center">
-        <a href="https://www.youtube.com/watch?v=nSdz5ln2rME" target=" ">
-          <img src="https://e1.pxfuel.com/desktop-wallpaper/427/756/desktop-wallpaper-fireman-fire-man.jpg" class="card-img-top" alt="Trainer 4"  height="300px" width="300px">
-        </a>
-        
-          <h3 class="card-title">Partho</h3>
-        <p>Holistic & Wellness Trainers
-- Certified Yoga Instructor (RYT)
-- Mindfulness and Meditation Coach
-- Pilates Instructor
-- Holistic Health Coach</p>
-      </div>
-    </div>
-
-    
-    <div class="col-md-4 mb-4">
-      <div class="card h-100 text-center">
-        <a href="https://www.youtube.com/watch?v=OkkzpzarkNQ" target=" ">
-          <img src="https://t3.ftcdn.net/jpg/05/23/36/24/360_F_523362482_o9WaDX0AXWubSDzhqsINCXU2ibhXUBbe.jpg" class="card-img-top" alt="Trainer 5" height="300px" width="300px">
-        </a>
-        
-          <h3 class="card-title">Ishraq</h3>
-      <p>Rehabilitation & Injury Prevention Specialists
-- Certified Corrective Exercise Specialist (CES)
-- Post-Rehabilitation Specialist
-- Physical Therapy Assistant (PTA)
-- Functional Movement Specialist</p>
-      </div>
-    </div>
-
-    
-    <div class="col-md-4 mb-4">
-      <div class="card h-100 text-center">
-        <a href="https://www.youtube.com/watch?v=Or_KdT4n8GE" target=" ">
-          <img src="https://t3.ftcdn.net/jpg/08/79/85/60/360_F_879856068_PwD6JIyOq3BEXZ8UHqc2fexKPoVIfEDQ.jpg" class="card-img-top" alt="Trainer 6" height="300px" width="300px">
-        </a>
-        
-          <h3 class="card-title">Abir</h3>
-        <p>Youth & Special Population Trainers
-- Youth Fitness Specialist
-- Senior Fitness Specialist
-- Adaptive Fitness Trainer (working with disabilities)
-- Postnatal Fitness Specialist</p>
+    <div class="row">
+      <div class="col-md-4 mb-4" v-for="(trainer, index) in trainers" :key="index">
+        <div class="card h-100 text-center">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" :src="trainer.video" allowfullscreen></iframe>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">{{ trainer.name }}</h3>
+            <p class="card-text">{{ trainer.description }}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-  </template>
-  
-  <script>
-    export default {
-    name: 'Video',
-    props: {
-        msg: String
-    }
-    }
+</template>
+
+<script>
+export default {
+  name: 'TrainerVideos',
+  data() {
+    return {
+      trainers: [
+        {
+          name: 'Mujahidul',
+          video: 'https://www.youtube.com/embed/o3tNt84zxqo?si=PSVFJBU5J-Ugxglx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin',
+          description: 'Strength & Conditioning Specialists\n- Certified Strength and Conditioning Specialist (CSCS)\n- Powerlifting Coach\n- Bodybuilding Specialist\n- Olympic Weightlifting Coach'
+        },
+        {
+          name: 'Hamim',
+          video: 'https://www.youtube.com/embed/D2bq6YVFGBY?si=fpz0yypUseZPE5Zw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin',
+          description: 'Endurance & Performance Trainers\n- Certified Running Coach\n- Triathlon Coach\n- Endurance Training Specialist\n- High-Intensity Interval Training (HIIT) Specialist'
+        },
+        {
+          name: 'Minhaz',
+          video: 'https://www.youtube.com/embed/nvCrar6IvBk?si=E6tptOuUp_A4tfdo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin',
+          description: 'Weight Loss & Nutrition Experts\n- Certified Weight Management Specialist (CWMS)\n- Precision Nutrition Coach\n- Fitness Nutrition Specialist (FNS)\n- Health and Wellness Coach'
+        },
+        {
+          name: 'Partho',
+          video: 'https://www.youtube.com/embed/z5NdRhPIwbw?si=rRIzBjZRqS0v1Nja" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin',
+          description: 'Holistic & Wellness Trainers\n- Certified Yoga Instructor (RYT)\n- Mindfulness and Meditation Coach\n- Pilates Instructor\n- Holistic Health Coach'
+        },
+        {
+          name: 'Ishraq',
+          video: 'https://www.youtube.com/embed/RtgKvUQ6Ukw?si=qbEjp5SLS0ToiULR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin',
+          description: 'Rehabilitation & Injury Prevention Specialists\n- Certified Corrective Exercise Specialist (CES)\n- Post-Rehabilitation Specialist\n- Physical Therapy Assistant (PTA)\n- Functional Movement Specialist'
+        },
+        {
+          name: 'Abir',
+          video: 'https://www.youtube.com/embed/YaMgObDxd0Q?si=4Pr5Hk9Q72AWqYz8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin',
+          description: 'Youth & Special Population Trainers\n- Youth Fitness Specialist\n- Senior Fitness Specialist\n- Adaptive Fitness Trainer (working with disabilities)\n- Postnatal Fitness Specialist'
+        }
+      ]
+    };
+  }
+};
 </script>
-  
+
+<style scoped>
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+.embed-responsive::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+.embed-responsive-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+</style>
