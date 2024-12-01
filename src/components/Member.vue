@@ -1,112 +1,93 @@
 <template>
-
-<section class="py-5">
-        <div class="container text-center">
-            <h2 class="mb-4">Membership Plans</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Basic Plan</h5>
-                            <p class="card-text">$30/month</p>
-                            <ul class="list-unstyled">
-                                <li>Access to gym equipment</li>
-                                <li>1 group class per week</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Premium Plan</h5>
-                            <p class="card-text">$50/month</p>
-                            <ul class="list-unstyled">
-                                <li>Unlimited gym access</li>
-                                <li>4 group classes per week</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">VIP Plan</h5>
-                            <p class="card-text">$70/month</p>
-                            <ul class="list-unstyled">
-                                <li>Unlimited gym access</li>
-                                <li>Personal trainer sessions</li>
-                                <li>Specialized diet plan</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<body>
     <div class="container mt-5">
-        <h2 class="text-center mb-4">Membership Form</h2>
-        <form>
-            <div class="row mb-3">
-                <div class="col">
-                    <label for="firstName" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
-                </div>
-                <div class="col">
-                    <label for="lastName" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
-            </div>
-            <div class="mb-3">
-                <label for="phone" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" id="phone" placeholder="123-456-7890" required>
-            </div>
-            <div class="mb-3">
-                <label for="membershipType" class="form-label">Membership Type</label>
-                <select class="form-select" id="membershipType" required>
-                    <option value="">Select Membership Type</option>
-                    <option value="basic">Basic</option>
-                    <option value="standard">Standard</option>
-                    <option value="premium">Premium</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="paymentMethod" class="form-label">Payment Method</label>
-                <select class="form-select" id="paymentMethod" required>
-                    <option value="">Select Payment Method</option>
-                    <option value="creditCard">Credit Card</option>
-                    <option value="paypal">PayPal</option>
-                    <option value="bankTransfer">Bank Transfer</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="comments" class="form-label">Comments or Special Requests</label>
-                <textarea class="form-control" id="comments" rows="3"></textarea>
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="terms" required>
-                <label class="form-check-label" for="terms">I agree to the terms and conditions</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+      <h2 class="text-center mb-4">Membership Form</h2>
+      <form @submit.prevent="submitMembership" class="border p-4 bg-light rounded">
+        <div class="row mb-3">
+          <div class="col">
+            <label for="f_name" class="form-label">First Name</label>
+            <input v-model="formData.f_name" type="text" class="form-control" id="f_name" required />
+          </div>
+          <div class="col">
+            <label for="l_name" class="form-label">Last Name</label>
+            <input v-model="formData.l_name" type="text" class="form-control" id="l_name" required />
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input v-model="formData.email" type="email" class="form-control" id="email" required />
+        </div>
+        <div class="mb-3">
+          <label for="contact_no" class="form-label">Contact Number</label>
+          <input v-model="formData.contact_no" type="tel" class="form-control" id="contact_no" required />
+        </div>
+        <div class="mb-3">
+          <label for="membership_type" class="form-label">Membership Type</label>
+          <select v-model="formData.membership_type" class="form-select" id="membership_type" required>
+            <option value="">Select Membership Type</option>
+            <option value="basic">Basic</option>
+            <option value="premium">Premium</option>
+            <option value="vip">VIP</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="payment_type" class="form-label">Payment Method</label>
+          <select v-model="formData.payment_type" class="form-select" id="payment_type" required>
+            <option value="">Select Payment Method</option>
+            <option value="creditCard">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="bankTransfer">Bank Transfer</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+      </form>
     </div>
-
-</body>
-
-    
-    </template>
-
-<script>
-    export default {
-    name: 'Member',
-    props: {
-        msg: String
+  </template>
+  
+  <script>
+  import DataService from "@/services/DataService"; // Make sure this is the correct path
+  
+  export default {
+    name: "Member",
+    data() {
+      return {
+        formData: {
+          f_name: "",
+          l_name: "",
+          email: "",
+          contact_no: "",
+          membership_type: "",
+          payment_type: "",
+        },
+      };
+    },
+    methods: {
+  async submitMembership() {
+    try {
+      await DataService.post("/membership/create", this.formData);
+      alert("Membership created successfully!");
+      this.resetForm();
+    } catch (error) {
+      console.error("Error creating membership:", error);
+      alert("Error creating membership: " + error.message);
     }
-    }
-</script>
+  },
+      resetForm() {
+        this.formData = {
+          f_name: "",
+          l_name: "",
+          email: "",
+          contact_no: "",
+          membership_type: "",
+          payment_type: "",
+        };
+      },
+    },
+  };
+  </script>
+  
+  <style scoped>
+  .container {
+    max-width: 500px;
+  }
+  </style>
+  

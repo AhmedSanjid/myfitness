@@ -146,53 +146,20 @@
     
     <!-- Facts Start -->
     <div class="container-fluid bg-dark facts p-5 my-5">
-        <div class="row gx-5 gy-4 py-5">
-            <div class="col-lg-3 col-md-6">
-                <div class="d-flex">
-                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                        <i class="fa fa-star fs-4 text-white"></i>
-                    </div>
-                    <div class="ps-4">
-                        <h5 class="text-secondary text-uppercase">Experience</h5>
-                        <h1 class="display-5 text-white mb-0" data-toggle="counter-up">2548</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="d-flex">
-                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                        <i class="fa fa-users fs-4 text-white"></i>
-                    </div>
-                    <div class="ps-4">
-                        <h5 class="text-secondary text-uppercase">Our Trainers</h5>
-                        <h1 class="display-5 text-white mb-0" data-toggle="counter-up">31</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="d-flex">
-                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                        <i class="fa fa-check fs-4 text-white"></i>
-                    </div>
-                    <div class="ps-4">
-                        <h5 class="text-secondary text-uppercase">Complete Project</h5>
-                        <h1 class="display-5 text-white mb-0" data-toggle="counter-up">10,258</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="d-flex">
-                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                        <i class="fa fa-mug-hot fs-4 text-white"></i>
-                    </div>
-                    <div class="ps-4">
-                        <h5 class="text-secondary text-uppercase">Happy Clients</h5>
-                        <h1 class="display-5 text-white mb-0" data-toggle="counter-up">11,45,98</h1>
-                    </div>
-                </div>
-            </div>
+    <div class="row gx-5 gy-4 py-5">
+      <div class="col-lg-3 col-md-6" v-for="(fact, index) in facts" :key="index">
+        <div class="d-flex">
+          <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+            <i :class="['fa', fact.icon, 'fs-4', 'text-white']"></i>
+          </div>
+          <div class="ps-4">
+            <h5 class="text-secondary text-uppercase">{{ fact.title }}</h5>
+            <h1 class="display-5 text-white mb-0">{{ fact.value }}</h1>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
     <!-- Facts End -->
 
     <!-- Team Start -->
@@ -337,10 +304,38 @@
 <script>
 export default {
   name: 'Home',
-  props: {
-    msg: String
+  data() {
+    return {
+      facts: [
+        { title: 'Experience', value: 2548, icon: 'fa-star' },
+        { title: 'Our Trainers', value: 31, icon: 'fa-users' },
+        { title: 'Complete Project', value: 10258, icon: 'fa-check' },
+        { title: 'Happy Clients', value: 114598, icon: 'fa-mug-hot' }
+      ]
+    };
+  },
+  mounted() {
+    this.startInterval();
+  },
+  methods: {
+    startInterval() {
+      setInterval(() => {
+        this.updateNumbers();
+      }, 1 * 60 * 1000); // 1 minute in milliseconds
+    },
+    updateNumbers() {
+      this.facts = [
+        { title: 'Experience', value: this.getRandomNumber(2000, 3500), icon: 'fa-star' },
+        { title: 'Our Trainers', value: this.getRandomNumber(20, 50), icon: 'fa-users' },
+        { title: 'Complete Project', value: this.getRandomNumber(10000, 15000), icon: 'fa-check' },
+        { title: 'Happy Clients', value: this.getRandomNumber(100000, 150000), icon: 'fa-mug-hot' }
+      ];
+    },
+    getRandomNumber(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -383,5 +378,15 @@ export default {
 .custom-card:hover i {
     color: #fff;
     transform: rotate(10deg) scale(1.1);
+}
+.facts {
+  background-color: #343a40;
+  color: white;
+}
+.facts .bg-primary {
+  background-color: #f54f07 !important;
+}
+.facts .text-secondary {
+  color: #6c757d !important;
 }
 </style>

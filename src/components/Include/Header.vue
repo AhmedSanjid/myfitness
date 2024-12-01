@@ -46,7 +46,7 @@
                     <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="/" class="nav-item nav-link active">Home</a>
                             <a href="/About" class="nav-item nav-link">About</a>
@@ -54,9 +54,7 @@
                             <a href="/Video" class="nav-item nav-link">Videos</a>
                             <a href="/Notice" class="nav-item nav-link">Notices</a>
                         </div>
-                        <a href="/Login" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block">
-                            Log in
-                        </a>
+                        <a href="/Login" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block">Log in</a>
 
                     </div>
                 </nav>
