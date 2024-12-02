@@ -44,7 +44,8 @@
   </template>
   
   <script>
-  import DataService from "@/services/DataService"; // Make sure this is the correct path
+  
+  import DataService from "../services/DataService";  // Make sure this is the correct path
   
   export default {
     name: "Member",
@@ -61,16 +62,27 @@
       };
     },
     methods: {
-  async submitMembership() {
-    try {
-      await DataService.post("/membership/create", this.formData);
-      alert("Membership created successfully!");
-      this.resetForm();
-    } catch (error) {
-      console.error("Error creating membership:", error);
-      alert("Error creating membership: " + error.message);
-    }
-  },
+       async submitMembership() {
+
+        const data = {
+          f_name: this.formData.f_name,
+          l_name: this.formData.l_name,
+          email: this.formData.email,
+          contact_no: this.formData.contact_no,
+          membership_type: this.formData.membership_type,
+          payment_type: this.formData.payment_type,
+        };
+
+        try {
+          await DataService.membership(data);
+          alert("Membership created successfully!");
+          this.resetForm();
+        } catch (error) {
+          console.error("Error creating membership:", error);
+          alert("Error creating membership: " + error.message);
+        }
+      },
+      
       resetForm() {
         this.formData = {
           f_name: "",

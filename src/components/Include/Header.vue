@@ -10,7 +10,7 @@
             <div class="col-lg-9">
                 <div class="row gx-0 bg-secondary d-none d-lg-flex">
                     <div class="col-lg-7 px-5 text-start">
-                        <div class="h-100 d-inline-flex align-items-center py-2 me-4">
+                        <div class="h-100 d-inline-flex align-items- py-2 me-4">
                             <i class="fa fa-envelope text-primary me-2"></i>
                             <h6 class="mb-0">idbb@isdb-bisew.org</h6>
                         </div>
@@ -46,7 +46,7 @@
                     <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="/" class="nav-item nav-link active">Home</a>
                             <a href="/About" class="nav-item nav-link">About</a>
@@ -54,8 +54,24 @@
                             <a href="/Video" class="nav-item nav-link">Videos</a>
                             <a href="/Notice" class="nav-item nav-link">Notices</a>
                         </div>
-                        <a href="/Login" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block">Log in</a>
+                        <div class="navbar-nav ml-auto">
+                            <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
 
+                                <!-- Display the user's full name if logged in, otherwise show 'User Account' -->
+                                {{ uid ? userName.name : 'Join Now' }}
+                            </a>
+                            <div class="dropdown-menu">
+                                <!-- Show Login/Signup if user is not logged in -->
+                                <a v-if="!uid" href="/Login" class="dropdown-item">Login</a>
+                                <a v-if="!uid" href="/Member" class="dropdown-item">Become a Member</a>
+
+                                <!-- Show Logout and user-specific links if user is logged in -->
+                                <button v-if="uid" class="dropdown-item" @click="logout">Logout</button>
+                                <a v-if="uid" href="/Myprofile" class="dropdown-item">My Profile</a>
+                            </div>
+                            </div>
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -68,10 +84,24 @@
 <script>
 export default {
   name: 'Header',
-  props: {
-    msg: String
-  }
-}
+  data() {
+    return {
+      uid: sessionStorage.getItem('uid'),
+      userName: JSON.parse(sessionStorage.getItem('userName')),
+      cart: JSON.parse(localStorage.getItem('cart')) || [], // Load cart from localStorage
+      wishlist: JSON.parse(localStorage.getItem('wishlist')) || [] // Load wishlist from localStorage
+    };
+  },
+  methods: {
+    logout() {
+      this.uid = "";  // Clear uid
+      this.userName = null;  // Clear userName
+      sessionStorage.removeItem('uid'); // Clear sessionStorage
+      sessionStorage.removeItem('userName'); // Clear sessionStorage
+      this.$router.push('/'); // Redirect to home or login page
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -79,3 +109,4 @@ export default {
   color: white;
 }
 </style>
+

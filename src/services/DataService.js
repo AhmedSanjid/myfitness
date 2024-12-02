@@ -6,11 +6,12 @@ class DataService {
   }
 
   membership(data) {
-    return http.post("/'membership/create", data);
+    return http.post("membership/create", data);
   }
 
-
-
+  community(data) {
+    return http.post("community/create", data);
+  }
 
   findByTitle(title) {
     return http.get(`/tutorials?title=${title}`);
