@@ -21,12 +21,12 @@
       </div>
 
       <div class="mb-3">
-        <label for="group" class="form-label">Join a Group</label>
-        <select v-model="formData.group" class="form-select" id="group" required>
-          <option selected disabled>Select a Group</option>
-          <option v-for="group in groups" :key="group.name" :value="group.name">{{ group.name }}</option>
-        </select>
-      </div>
+    <label for="group" class="form-label">Join a Group</label>
+    <select v-model="formData.group" class="form-select" id="group" required>
+        <option value="" selected>Select a Group</option>
+        <option v-for="group in groups" :key="group.name" :value="group.name">{{ group.name }}</option>
+    </select>
+</div>
 
       <div class="text-center">
         <button type="submit" class="btn btn-primary text-uppercase px-5">Join Community</button>

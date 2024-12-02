@@ -90,6 +90,12 @@ const routes =  [
     alias: "/Myprofile",
     name: "Myprofile",
     component: () => import("./components/Myprofile")
+  },
+  {
+    path: "/EditProfile",
+    alias: "/EditProfile",
+    name: "EditProfile",
+    component: () => import("./components/EditProfile")
   }
 ];
 

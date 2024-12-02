@@ -1,64 +1,166 @@
 <template>
-   <div class="container my-5">
-    <h2 class="text-center mb-4">User Profile Form</h2>
-    <form class="bg-light p-5 rounded shadow">
-      <!-- Profile Picture Upload -->
-      <div class="mb-3 text-center">
-        <label for="profilePicture" class="form-label">Profile Picture</label>
-        <div class="d-flex justify-content-center">
-          <img id="preview" src="https://via.placeholder.com/150" alt="Profile Picture" class="rounded-circle mb-3" width="150" height="150">
+  <div class="my-profile">
+    <!-- Profile Header -->
+    <div class="container">
+      <h1 class="page-title">My Profile</h1>
+
+      <!-- Loading State -->
+      <div v-if="loading" class="loading-state">
+        <p>Loading profile...</p>
+      </div>
+
+      <!-- Error State -->
+      <div v-else-if="error" class="error-state">
+        <p>Error loading profile: {{ error }}</p>
+      </div>
+
+      <div v-else-if="userName" class="profile-container">
+        <!-- Profile Info -->
+        <div class="profile-card">
+          <div class="profile-header">
+            <!-- Profile Picture -->
+            <div class="profile-pic">
+              <img :src="userName.profile_pic || ''" alt="Profile Picture" class="profile-img" />
+            </div>
+            <div class="profile-details">
+              <h2>{{ userName.full_name }}</h2>
+              <p class="profile-email">E-mail: {{ userName.email }}</p>
+              <p class="profile-phone">Phone: {{ userName.phone }}</p>
+              <p class="profile-address">Address: {{ userName.address }}</p>
+            </div>
+          </div>
+          <button @click="editProfile" class="btn btn-primary">Edit Profile</button>
         </div>
-        <input type="file" class="form-control" id="profilePicture" accept="image/*" required>
       </div>
 
-      <!-- First Name -->
-      <div class="mb-3">
-        <label for="firstName" class="form-label">First Name</label>
-        <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+      <!-- If not logged in, show a message -->
+      <div v-else>
+        <p>Please log in to view and edit your profile.</p>
+        <router-link to="/login" class="btn btn-primary">Login</router-link>
       </div>
-
-      <!-- Last Name -->
-      <div class="mb-3">
-        <label for="lastName" class="form-label">Last Name</label>
-        <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
-      </div>
-
-      <!-- Email Address -->
-      <div class="mb-3">
-        <label for="email" class="form-label">Email Address</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-      </div>
-
-      <!-- Contact Number -->
-      <div class="mb-3">
-        <label for="contact" class="form-label">Contact Number</label>
-        <input type="tel" class="form-control" id="contact" placeholder="Enter your contact number" required>
-      </div>
-
-      <!-- Membership Type -->
-      <div class="mb-3">
-        <label for="membershipType" class="form-label">Membership Type</label>
-        <select class="form-select" id="membershipType" required>
-          <option selected disabled>Select Membership Type</option>
-          <option value="Basic">Basic</option>
-          <option value="Premium">Premium</option>
-          <option value="Elite">Elite</option>
-        </select>
-      </div>
-
-      <!-- Submit Button -->
-      <div class="text-center">
-        <button type="submit" class="btn btn-primary text-uppercase px-5">Save Profile</button>
-      </div>
-    </form>
+    </div>
   </div>
 </template>
-
 <script>
 export default {
-  name: 'Myprofile',
-  props: {
-    msg: String
-  }
-}
+  name: 'MyProfile',
+  data() {
+    return {
+      userName: null,
+      loading: true,
+      error: null,
+    };
+  },
+  created() {
+    this.fetchProfile();
+  },
+  methods: {
+    async fetchProfile() {
+      try {
+        // Mock data for testing
+        const mockData = {
+          full_name: 'Sanjid Ahmed Mukut',
+          email: 'mukut@yahoo.com',
+          phone: '01316752707',
+          address: 'W/B-13, A.K Khan Road, Akborsha, Chattogram',
+          profile_pic: 'https://i.pinimg.com/736x/94/39/0f/94390f6ba429ec6b613f4103528d711d.jpg'
+          
+        };
+
+        // Simulate an API call
+        setTimeout(() => {
+          this.userName = mockData;
+          this.loading = false;
+        }, 1000); // Simulate a 1-second delay
+      } catch (error) {
+        this.error = error.message;
+        this.loading = false;
+      }
+    },
+    editProfile() {
+      this.$router.push('/EditProfile');
+    },
+  },
+};
 </script>
+<style scoped>
+.my-profile {
+  padding: 20px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  margin-bottom: 20px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-details h2 {
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+
+.profile-email, .profile-phone {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+.btn {
+  background-color: #151414;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #FB5B21;
+}
+
+.btn-primary {
+  margin-top: 20px;
+}
+
+.loading-state, .error-state {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+}
+</style>

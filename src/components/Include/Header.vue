@@ -46,7 +46,7 @@
                     <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="/" class="nav-item nav-link active">Home</a>
                             <a href="/About" class="nav-item nav-link">About</a>
@@ -55,23 +55,22 @@
                             <a href="/Notice" class="nav-item nav-link">Notices</a>
                         </div>
                         <div class="navbar-nav ml-auto">
-                            <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+    <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+            <!-- Display the user's full name if logged in, otherwise show 'User Account' -->
+            {{ uid ? userName.name : 'Join Now' }}
+        </a>
+        <div class="dropdown-menu">
+            <!-- Show Login/Signup if user is not logged in -->
+            <a v-if="!uid" href="/Login" class="dropdown-item">Login</a>
+            <a v-if="!uid" href="/Member" class="dropdown-item">Become a Member</a>
 
-                                <!-- Display the user's full name if logged in, otherwise show 'User Account' -->
-                                {{ uid ? userName.name : 'Join Now' }}
-                            </a>
-                            <div class="dropdown-menu">
-                                <!-- Show Login/Signup if user is not logged in -->
-                                <a v-if="!uid" href="/Login" class="dropdown-item">Login</a>
-                                <a v-if="!uid" href="/Member" class="dropdown-item">Become a Member</a>
-
-                                <!-- Show Logout and user-specific links if user is logged in -->
-                                <button v-if="uid" class="dropdown-item" @click="logout">Logout</button>
-                                <a v-if="uid" href="/Myprofile" class="dropdown-item">My Profile</a>
-                            </div>
-                            </div>
-                        </div>
+            <!-- Show Logout and user-specific links if user is logged in -->
+            <button v-if="uid" class="dropdown-item" @click="logout">Logout</button>
+            <a v-if="uid" href="/Myprofile" class="dropdown-item">Profile</a>
+        </div>
+    </div>
+</div>
                     </div>
                 </nav>
             </div>
@@ -107,6 +106,18 @@ export default {
 <style scoped>
 #gym:hover {
   color: white;
+}
+/* Apply styles to dropdown items */
+.dropdown-menu .dropdown-item {
+    color: black; /* Default text color */
+    background-color: white; /* Default background color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Apply styles when hovering over dropdown items */
+.dropdown-menu .dropdown-item:hover {
+    color: black; /* Text color on hover */
+    background-color: rgba(221, 85, 17, 0.806); /* Background color on hover */
 }
 </style>
 

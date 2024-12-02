@@ -77,8 +77,8 @@
 
         <!-- Discount Banner -->
         <div class="col-lg-12 col-md-6 text-center">
-            <h1 class="text-uppercase text-light mb-4">30% Discount For This Winter</h1>
-            <a href="/Member" class="btn btn-primary py-3 px-5">Become A Member</a>
+            <h1 class="text-uppercase text-primary mb-4">30% Discount For This Winter</h1>
+            <!-- <a href="/Member" class="btn btn-primary py-3 px-5">Become A Member</a> -->
         </div>
     </div>
 </div>
