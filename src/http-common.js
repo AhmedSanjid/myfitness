@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://weeblecode.com/myfitness/public/api",
+  baseURL: "https://weeblecode.com/logistics/public/api",
   headers: {
     "Content-type": "application/json"
   }
